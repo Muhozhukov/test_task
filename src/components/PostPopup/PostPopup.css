@@ -7,7 +7,7 @@
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: .2s;
+  transition: 0.2s;
 }
 .post-popup__container {
   position: fixed;

@@ -7,10 +7,10 @@
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.popup__form{
+.popup__form {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -32,7 +32,7 @@
   top: -34px;
   right: -34px;
   padding: 0;
-  transition: .2s;
+  transition: 0.2s;
 }
 .popup__close-button:hover {
   opacity: 0.6;
@@ -59,7 +59,7 @@
 .popup__input {
   border: none;
   background-color: rgb(150, 178, 231);
-  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -85,7 +85,7 @@
   text-align: center;
   color: black;
   margin-bottom: 36px;
-  transition: .2s;
+  transition: 0.2s;
 }
 .popup__submit-button:hover {
   background-color: rgb(41, 116, 255);

@@ -1,11 +1,11 @@
-import './App.css';
-import React from 'react';
-import Posts from '../Posts/Posts';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import api from '../Api/Api';
-import Popup from '../Popup/Popup';
-import PostPopup from '../PostPopup/PostPopup';
+import "./App.css";
+import React from "react";
+import Posts from "../Posts/Posts";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import api from "../Api/Api";
+import Popup from "../Popup/Popup";
+import PostPopup from "../PostPopup/PostPopup";
 function App() {
   const [isPopupOpened, setIsPopupOpened] = React.useState(false);
   const [isPostPopupOpened, setIsPostPopupOpened] = React.useState(false);
@@ -24,29 +24,27 @@ function App() {
     setIsPostPopupOpened(true);
   }
   React.useEffect(() => {
-    api.getPosts()
+    api
+      .getPosts()
       .then((res) => setPosts(res))
-      .catch((err) => console.log(err))
-  }, [])
+      .catch((err) => console.log(err));
+  }, []);
   return (
-    <div className='App'>
-    <Header></Header>
-    <Posts
-      openPopup={openPopup}
-      onPostClick={(data) => handlePostClick(data)}
-      posts={posts}></Posts>
+    <div className="App">
+      <Header></Header>
+      <Posts
+        openPopup={openPopup}
+        onPostClick={(data) => handlePostClick(data)}
+        posts={posts}
+      ></Posts>
 
-
-    <Footer></Footer>
-    <Popup
-      closePopup={closeAllPopup}
-      isOpen={isPopupOpened}>
-
-    </Popup>
-    <PostPopup
-      selectedPost={selectedPost}
-      closePopup={closeAllPopup}
-      isOpen={isPostPopupOpened}></PostPopup>
+      <Footer></Footer>
+      <Popup closePopup={closeAllPopup} isOpen={isPopupOpened}></Popup>
+      <PostPopup
+        selectedPost={selectedPost}
+        closePopup={closeAllPopup}
+        isOpen={isPostPopupOpened}
+      ></PostPopup>
     </div>
   );
 }
