@@ -1,0 +1,126 @@
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .2s;
+}
+
+.popup__form{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  background: rgb(150, 178, 231);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.popup__close-button {
+  position: absolute;
+  width: 40.7px;
+  height: 40.7px;
+  background-color: transparent;
+  border: none;
+  top: -34px;
+  right: -34px;
+  padding: 0;
+  transition: .2s;
+}
+.popup__close-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.popup__close-button-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.popup__container {
+  padding-top: 34px;
+  display: flex;
+  flex-direction: column;
+  max-width: 358px;
+  margin: 0 auto;
+}
+.popup__lable {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.popup__input {
+  border: none;
+  background-color: rgb(150, 178, 231);
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: black;
+}
+.popup__input:nth-of-type(2) {
+  margin-bottom: 48px;
+}
+.popup__submit-button {
+  width: 358px;
+  height: 50.15px;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  font-family: inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: black;
+  margin-bottom: 36px;
+  transition: .2s;
+}
+.popup__submit-button:hover {
+  background-color: rgb(41, 116, 255);
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .popup__submit-button {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .popup__input:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup__container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup__form {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .popup__form {
+    width: 220px;
+  }
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
